@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Mover</title>
+	<title>Move!</title>
 	<script src='JS/keyboard.js'></script>
 	<!-- include three.js library -->
 	<script src='JS/three.js'></script>
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
-
-<!-- 
-  Example created by Lee Stemkoski: https://github.com/stemkoski
--->
 
 <script>
 
@@ -105,7 +101,7 @@ function update()
 	// Move Right and Left
 	if (keyboard.isKeyPressed("A"))
 		mover.translateX( -distance );
-	        mover.RotateY( 90 );
+	        mover.rotateY( 90 );
 	if (keyboard.isKeyPressed("D"))
 		mover.translateX( distance );
 	
