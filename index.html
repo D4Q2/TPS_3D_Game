@@ -92,31 +92,37 @@ function update()
 	let rotateSpeed = Math.PI/3; // radians per second
 	let angle = rotateSpeed * deltaTime;
 	
+	// Move Forward and Back
 	if (keyboard.isKeyPressed("W"))
 		mover.translateZ( -distance );
 	if (keyboard.isKeyPressed("S"))
 		mover.translateZ( distance );
-		
+	
+	// Move Right and Left
 	if (keyboard.isKeyPressed("A"))
 		mover.translateX( -distance );
 	if (keyboard.isKeyPressed("D"))
 		mover.translateX( distance );
-		
+	
+	/* Move Up and Down 
 	if (keyboard.isKeyPressed("R"))
 		mover.translateY( distance );
 	if (keyboard.isKeyPressed("F"))
 		mover.translateY( -distance );
-		
+	*/
+	
+	// Rotate Right and Left
 	if (keyboard.isKeyPressed("Q"))
 		mover.rotateY( angle );
 	if (keyboard.isKeyPressed("E"))
 		mover.rotateY( -angle );
-		
+	
+	/* Rotate Forward and Backward
 	if (keyboard.isKeyPressed("T"))
 		mover.children[0].rotateX( angle );
 	if (keyboard.isKeyPressed("G"))
 		mover.children[0].rotateX( -angle );
-	
+	*/
 	
 	//mesh.rotation.y += 0.01;
 }
