@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Move!</title>
+	<title>Move</title>
 	<script src='JS/keyboard.js'></script>
 	<!-- include three.js library -->
 	<script src='JS/three.js'></script>
@@ -89,7 +89,7 @@ function update()
 	let angle = rotateSpeed * deltaTime;
 	
 	// Increase move speed with shift
-	if (keyboard.isKeyPressed("Shift"))
+	if (keyboard.isKeyPressed("shiftKey"))
 		translateSpeed = 1;
 	
 	// Move Forward and Back
