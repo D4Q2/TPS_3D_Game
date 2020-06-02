@@ -92,6 +92,10 @@ function update()
 	let rotateSpeed = Math.PI/3; // radians per second
 	let angle = rotateSpeed * deltaTime;
 	
+	// Increase move speed with shift
+	if (keyboard.isKeyPressed("LeftShift"))
+		translateSpeed = 1;
+	
 	// Move Forward and Back
 	if (keyboard.isKeyPressed("W"))
 		mover.translateZ( -distance );
@@ -101,7 +105,7 @@ function update()
 	// Move Right and Left
 	if (keyboard.isKeyPressed("A"))
 		mover.translateX( -distance );
-	        mover.rotationY = 90;
+	        mover.RotateY( 90 );
 	if (keyboard.isKeyPressed("D"))
 		mover.translateX( distance );
 	
